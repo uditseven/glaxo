@@ -7,8 +7,7 @@ A medicine inventory management system.
 ```
 foo@bar:~$ source ./venv/bin/activate
 ```
-- Add credentials for Google SMTP in settings.py
-- Add your 160by2 API keys in sms.py 
+
 
 ## Install
 
@@ -33,5 +32,5 @@ foo@bar:~$ python manage.py runserver
 foo@bar:~$ sudo fuser -k 8000/tcp
 ```
 -
-Shubham Anand
+Shubham Anand 
 Udit Pandey
