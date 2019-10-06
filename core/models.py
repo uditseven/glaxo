@@ -1,13 +1,15 @@
 from django.db import models
-
+from django.utils.timezone import now
 # Create your models here.
 
-class purchase(models.Model): #name of table
+class Purchase(models.Model):
+    name = models.CharField(max_length=20)
+    phone = models.IntegerField(max_length=20)
+    address = models.CharField(max_length=20)
+    medicine = models.CharField(max_length=120)
+    purchase_date = models.DateTimeField(default=now, editable=True)
+    clearance_status = models.CharField(max_length=20)
+    
 
-   # id = models.IntegerField(blank=False)
-    name = models.CharField(max_length=50, blank=False)
-    phone = models.IntegerField()
-    amount = models.IntegerField()
 
-    def __str__(self):
-        return 'Id : {0} Name : {1}',format(self.id, self.name)
+
