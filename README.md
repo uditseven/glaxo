@@ -1,6 +1,7 @@
 # glaxo
 A medicine inventory management system.
 
+
 ## Setup
 - Activate Virtual Environment
 ```
@@ -31,4 +32,6 @@ foo@bar:~$ python manage.py runserver
 ```
 foo@bar:~$ sudo fuser -k 8000/tcp
 ```
-
+-
+Shubham Anand
+Udit Pandey
