@@ -32,5 +32,5 @@ foo@bar:~$ python manage.py runserver
 foo@bar:~$ sudo fuser -k 8000/tcp
 ```
 -
-Shubham Anand 
+Shubham Anand &
 Udit Pandey
