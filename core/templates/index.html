@@ -1,54 +1,31 @@
-{% extends 'base.html' %}
+<html>
 
-{% block body %}
+        <head>
+            <title>Med</title>
+        </head>
+        
+        {% load static %}
+        
+        <link rel="stylesheet" href={% static '/css/style.css' %}>
+        <link rel="stylesheet" href={% static '/css/bootstrap.min.css' %}>
+        
+        <body>
 
-<br>
-
-<div class="user-def-btn-name">
-        <a href="#" class="btn btn-primary btn-md" role="button">Add Item</a>
-        <a href="#" class="btn btn-warning btn-sm" role="button">+</a>
-
-</div>
-
-<br>
-
-<table class="table table-hover">
-    <thead>
-        <tr>
-           
-            <th>name</th>
-            <th>phone</th>
-            <th>address</th>
-            <th>medicine</th>
-            <th>Purchase_date</th>
-            <th>clearance_status</th>
+                <form method="post">
+                        {% csrf_token %} {{ form }}
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">
+                                <span class="glyphicon glyphicon-ok"></span> Save
+                              </button>
+                        </div>
+                      </form> 
             
-
         
-        </tr>
-    </thead>
-
-    <tbody>{% for i in orders %}
-<tr>
+        </body>
         
+        </html> 
+  
+  
+  
+ 
 
-    <td>{{ i.name }}</td>
-
-    <td>{{ i.phone }}</td>
-
-    <td>{{ i.address }}</td>
-
-    <td>{{ i.medicine }}</td>
-
-    <td>{{ i.purchase_date }}</td>
-
-    <td>{{ i.clearance_status }}</td>
-    {% endfor %}
-    
-</tr>
-
-    </tbody>
-</table>
-
-
-{% endblock %}
