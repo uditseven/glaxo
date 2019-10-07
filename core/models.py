@@ -4,7 +4,7 @@ from django.utils.timezone import now
 
 class Purchase(models.Model):
     name = models.CharField(max_length=20)
-    phone = models.IntegerField(max_length=20)
+    phone = models.IntegerField()
     address = models.CharField(max_length=20)
     medicine = models.CharField(max_length=120)
     purchase_date = models.DateTimeField(default=now, editable=True)

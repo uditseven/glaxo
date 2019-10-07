@@ -15,17 +15,37 @@
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>id</th>
+           
             <th>name</th>
             <th>phone</th>
-            <th>amount</th>
+            <th>address</th>
+            <th>medicine</th>
+            <th>Purchase_date</th>
+            <th>clearance_status</th>
+            
 
         
         </tr>
     </thead>
 
-    <tbody>
+    <tbody>{% for i in orders %}
+<tr>
+        
 
+    <td>{{ i.name }}</td>
+
+    <td>{{ i.phone }}</td>
+
+    <td>{{ i.address }}</td>
+
+    <td>{{ i.medicine }}</td>
+
+    <td>{{ i.purchase_date }}</td>
+
+    <td>{{ i.clearance_status }}</td>
+    {% endfor %}
+    
+</tr>
 
     </tbody>
 </table>
