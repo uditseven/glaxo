@@ -1,0 +1,29 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>expiry-date</th>
+            <th>purchase-date</th>
+            <th>party-name</th>
+            <th>price</th>
+            <th>quantity</th>
+
+        
+        </tr>
+    </thead>
+
+    <tbody> { % for i in items  %}
+   
+
+    <tr>  
+      <td>{{ i.name }}</td>
+      <td>{{ i.expiry_date }}</td>
+      <td>{{ i.purchase_date }} </td>
+      <td>{{ i.party_name }}</td>
+      <td>{{ i.price }}</td>
+      <td>{{ i.quantity }}</td>
+    { % endfor % }
+    </tr>
+    </tbody>
+
+</table>
