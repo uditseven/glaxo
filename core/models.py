@@ -11,5 +11,11 @@ class Purchase(models.Model):
     clearance_status = models.CharField(max_length=20)
     
 
-
+class Medicine(models.Model):
+    name = models.CharField(max_length=20)
+    expiry_date = models.DateTimeField(default=now, editable=True)
+    purchase_date = models.DateTimeField(default=now, editable=True)
+    party_name =  models.CharField(max_length=20)
+    price = models.IntegerField()
+    quantity = models.IntegerField()
 
